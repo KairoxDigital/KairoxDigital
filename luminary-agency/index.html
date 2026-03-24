@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kairox | Premium Digital Agency</title>
+    <meta name="description" content="We design and build premium, high-performance websites for modern businesses.">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png">
+    <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Elements -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    <div class="ambient-noise"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Agency Logo" class="site-logo">
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#industries">Industries</a>
+                <a href="#portfolio">Our Work</a>
+                <a href="#about">Studio</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-outline nav-cta">Let's Talk</a>
+                <div class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav glass">
+        <div class="close-menu-btn"><i class="fa-solid fa-xmark"></i></div>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#portfolio" class="mobile-link">Our Work</a>
+        <a href="#industries" class="mobile-link">Industries</a>
+        <a href="#about" class="mobile-link">Studio</a>
+        <a href="#contact" class="btn btn-glow mobile-cta">Start exploring</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero relative" id="home">
+        <div class="container hero-layout">
+            <div class="hero-content z-10 fade-in-up">
+                <span class="badge glow-border mt-2">Next-Gen Digital Solutions</span>
+                <h1 class="hero-heading">Crafting <br><span class="text-gradient">Premium</span> Digital Experiences</h1>
+                <p class="hero-subtext">We are a boutique tech agency designing and engineering powerful websites that help modern businesses dominate their market.</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-glow btn-large">View Portfolio</a>
+                    <a href="#contact" class="btn btn-glass btn-large">Start a Project</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual z-10 fade-in-up delay-1">
+                <!-- Parallax floating UI cards -->
+                <div class="floating-ui-card card-1 glass" data-speed="1.5">
+                    <div class="card-header">
+                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                    </div>
+                    <div class="card-body snippet">
+                        <div class="line w-100"></div>
+                        <div class="line w-75 pulse-bg"></div>
+                        <div class="line w-50"></div>
+                    </div>
+                </div>
+                
+                <div class="floating-ui-card card-2 glass glow-border" data-speed="-1">
+                    <div class="stat-circle">
+                        <span>99%</span>
+                    </div>
+                    <p>Performance Score</p>
+                </div>
+                
+                <div class="floating-ui-card card-3 glass" data-speed="2">
+                    <i class="fa-solid fa-rocket text-gradient"></i>
+                    <h4>Launch Ready</h4>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2 class="section-title">Architects of Layout</h2>
+                <p class="section-desc">We offer end-to-end digital services, from conceptual design to high-performance development.</p>
+            </div>
+            
+            <div class="services-asymmetric-grid">
+                <div class="service-panel panel-large glass slide-up-stagger">
+                    <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>UI/UX Design Systems</h3>
+                    <p>We build scalable, premium design systems using modern aesthetics, glassmorphism, and kinetic UI animations that captivate users.</p>
+                    <a href="#portfolio" class="text-link mt-4">See Examples <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-panel panel-small glass slide-up-stagger">
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Web Engineering</h3>
+                    <p>Performant, component-driven development with cutting-edge tech stacks.</p>
+                </div>
+                
+                <div class="service-panel panel-small glass slide-up-stagger">
+                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Performance</h3>
+                    <p>Lightning fast load times optimized for Core Web Vitals and SEO.</p>
+                </div>
+                
+                <div class="service-panel panel-wide glass slide-up-stagger">
+                    <div class="service-content-split">
+                        <div>
+                            <div class="service-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                            <h3>Digital Redesigns</h3>
+                            <p>We transform legacy websites into modern, conversion-focused platforms that align with current design trends.</p>
+                        </div>
+                        <div class="visual-placeholder">
+                            <div class="wireframe-mockup">
+                                <div class="w-bar bg-accent"></div>
+                                <div class="w-box"></div>
+                                <div class="w-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries section-padding" id="industries">
+        <div class="container relative z-10">
+            <div class="industries-layout">
+                <div class="industries-text fade-in-up">
+                    <h2 class="section-title">Engineered for Every Sector</h2>
+                    <p class="section-desc">Our design principles adapt to your industry logic. Whether building trust for a hospital or energy for a gym, we craft tailored experiences.</p>
+                    <a href="#contact" class="btn btn-outline mt-4">Discuss Your Niche</a>
+                </div>
+                
+                <div class="industries-floating-map fade-in-up delay-1">
+                    <div class="industry-bubble bubble-1" data-speed="1.2">
+                        <div class="bubble-inner glass">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <span>Cafes</span>
+                        </div>
+                    </div>
+                    <div class="industry-bubble bubble-2" data-speed="-0.8">
+                        <div class="bubble-inner glass">
+                            <i class="fa-solid fa-dumbbell text-gradient"></i>
+                            <span>Gyms</span>
+                        </div>
+                    </div>
+                    <div class="industry-bubble bubble-3" data-speed="1.5">
+                        <div class="bubble-inner glass">
+                            <i class="fa-solid fa-stethoscope"></i>
+                            <span>Clinics</span>
+                        </div>
+                    </div>
+                    <div class="industry-bubble bubble-4" data-speed="-1.2">
+                        <div class="bubble-inner glass">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Schools</span>
+                        </div>
+                    </div>
+                    <div class="industry-bubble bubble-5" data-speed="1">
+                        <div class="bubble-inner glass">
+                            <i class="fa-solid fa-hospital text-gradient"></i>
+                            <span>Hospitals</span>
+                        </div>
+                    </div>
+                    <div class="industry-bubble bubble-6" data-speed="-0.5">
+                        <div class="bubble-inner glass">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Retail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="badge glow-border">Selected Works</span>
+                <h2 class="section-title">Digital Masterpieces</h2>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-tile slide-up-stagger">
+                    <div class="tile-image-wrapper">
+                        <img class="tile-image" src="assets/cafe-preview.jpg" alt="Brew Haven Cafe Preview">
+                    </div>
+                    <div class="tile-content">
+                        <div class="tile-meta">
+                            <span class="industry-tag">Cafe</span>
+                        </div>
+                        <h3>Brew Haven Cafe</h3>
+                        <a href="https://brew-haven-cafe-demo.vercel.app" target="_blank" class="btn btn-glow btn-sm mt-4">View Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-tile slide-up-stagger">
+                    <div class="tile-image-wrapper">
+                        <img class="tile-image" src="assets/gym-preview.jpg" alt="Apex Strength Gym Preview">
+                    </div>
+                    <div class="tile-content">
+                        <div class="tile-meta">
+                            <span class="industry-tag">Gym</span>
+                        </div>
+                        <h3>Apex Strength</h3>
+                        <a href="https://apex-gym-demo.vercel.app" target="_blank" class="btn btn-glow btn-sm mt-4">View Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-tile slide-up-stagger">
+                    <div class="tile-image-wrapper">
+                        <img class="tile-image" src="assets/clinic-preview.jpg" alt="CarePlus Medical Clinic Preview">
+                    </div>
+                    <div class="tile-content">
+                        <div class="tile-meta">
+                            <span class="industry-tag">Clinic / Healthcare</span>
+                        </div>
+                        <h3>CarePlus Medical Clinic</h3>
+                        <a href="https://care-plus-demo.vercel.app" target="_blank" class="btn btn-glow btn-sm mt-4">View Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-tile slide-up-stagger">
+                    <div class="tile-image-wrapper">
+                        <img class="tile-image" src="assets/school-preview.jpg" alt="BrightFuture Academy Preview">
+                    </div>
+                    <div class="tile-content">
+                        <div class="tile-meta">
+                            <span class="industry-tag">Education</span>
+                        </div>
+                        <h3>BrightFuture Academy</h3>
+                        <a href="https://bright-future-demo.vercel.app" target="_blank" class="btn btn-glow btn-sm mt-4">View Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-tile slide-up-stagger">
+                    <div class="tile-image-wrapper">
+                        <img class="tile-image" src="assets/hospital-preview.jpg" alt="Lifeline Multispeciality Preview">
+                    </div>
+                    <div class="tile-content">
+                        <div class="tile-meta">
+                            <span class="industry-tag">Hospital</span>
+                        </div>
+                        <h3>Lifeline Multispeciality</h3>
+                        <a href="https://life-line-demo.vercel.app" target="_blank" class="btn btn-glow btn-sm mt-4">View Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-tile slide-up-stagger">
+                    <div class="tile-image-wrapper">
+                        <img class="tile-image" src="assets/mall-preview.jpg" alt="Grand Fashion Mall Preview">
+                    </div>
+                    <div class="tile-content">
+                        <div class="tile-meta">
+                            <span class="industry-tag">Retail / Shopping Mall</span>
+                        </div>
+                        <h3>Grand Fashion Mall</h3>
+                        <a href="https://grand-fashion-mall-demo.vercel.app" target="_blank" class="btn btn-glow btn-sm mt-4">View Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features section-padding">
+        <div class="container relative z-10">
+            <div class="section-header text-center fade-in-up">
+                <h2 class="section-title">The KAIROX Standard</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-block glass slide-up-stagger">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-wand-magic-sparkles text-gradient"></i>
+                    </div>
+                    <h4>Bespoke Aesthetics</h4>
+                    <p>No templates. Every pixel is crafted specifically for your brand's unique identity.</p>
+                </div>
+                <div class="feature-block glass slide-up-stagger">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-gauge-high text-gradient"></i>
+                    </div>
+                    <h4>Unmatched Speed</h4>
+                    <p>Engineered layouts and optimized assets ensuring instant load times.</p>
+                </div>
+                <div class="feature-block glass slide-up-stagger">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-mobile-screen-button text-gradient"></i>
+                    </div>
+                    <h4>Fluid Responsive</h4>
+                    <p>Flawless scaling and adaptive layouts for desktop, tablet, and mobile viewers.</p>
+                </div>
+                <div class="feature-block glass slide-up-stagger">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-shield-halved text-gradient"></i>
+                    </div>
+                    <h4>Agency Support</h4>
+                    <p>Continuous architectural maintenance to keep your digital platform secure and modern.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-text fade-in-up">
+                    <span class="badge glow-border">The Studio</span>
+                    <h2 class="section-title">Meet the Visionaries</h2>
+                    <p class="section-desc">Kairox Digital was founded on a simple belief — businesses deserve digital experiences that reflect the true quality of their services.</p>
+                    <p class="section-desc text-light">We partner with you to design and build high-performing websites that not only look professional but actively drive growth.</p>
+                </div>
+                
+                <div class="founders-showcase fade-in-up delay-1">
+                    <!-- Founder 1 -->
+                    <div class="founder-glass-card glass">
+                        <div class="founder-image-wrapper">
+                            <div class="portrait-glow"></div>
+                            <img src="assets/founder1.png" alt="G Arpith" class="founder-img">
+                        </div>
+                        <div class="founder-info">
+                            <h3>G Arpith</h3>
+                            <p class="role text-gradient">Founder & Client Strategy</p>
+                            <p class="bio">Drives client growth by translating business needs into high-impact digital solutions.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Founder 2 -->
+                    <div class="founder-glass-card glass">
+                        <div class="founder-image-wrapper">
+                            <div class="portrait-glow"></div>
+                            <img src="assets/founder2.png" alt="Sam Dirsipam" class="founder-img">
+                        </div>
+                        <div class="founder-info">
+                            <h3>Sam Dirsipam</h3>
+                            <p class="role text-gradient">Lead Developer</p>
+                            <p class="bio">Leads the development of fast, scalable web platforms built for performance and long-term reliability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action / Contact -->
+    <section class="contact-section section-padding relative" id="contact">
+        <div class="cta-glow-bg"></div>
+        <div class="container relative z-10">
+            <div class="contact-layout glass glow-border">
+                <div class="contact-text fade-in-up">
+                    <h2 class="section-title">Ready to Elevate?</h2>
+                    <p class="section-desc text-light">Stop losing clients to outdated web presence. Let’s build a platform that scales your business.</p>
+                    <div class="contact-info mt-4">
+                        <p><i class="fa-solid fa-envelope text-gradient"></i> Kairox.digital7@gmail.com</p>
+                        <p><i class="fa-solid fa-location-dot text-gradient"></i> Hyderabad, India</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper fade-in-up delay-1">
+                    <form class="modern-form" id="contactForm">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="input-focus-border"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <div class="input-focus-border"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <select id="businessType" name="businessType" required>
+                                <option value="" disabled selected></option>
+                                <option value="cafe">Cafe / Restaurant</option>
+                                <option value="gym">Gym / Fitness</option>
+                                <option value="clinic">Clinic / Healthcare</option>
+                                <option value="school">Education</option>
+                                <option value="retail">Retail / E-commerce</option>
+                                <option value="other">Other Business</option>
+                            </select>
+                            <label for="businessType" class="select-label">Industry</label>
+                            <div class="input-focus-border"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Project Details</label>
+                            <div class="input-focus-border"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-glow btn-block btn-large mt-4">Initiate Contact <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top" style="align-items: flex-start;">
+                <div class="footer-brand-info">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/logo.png" alt="Agency Logo" class="site-logo">
+                    </a>
+                    <p class="text-light mt-4" style="max-width: 300px;">We design and build premium websites for modern businesses.</p>
+                    <p class="mt-2"><a href="mailto:hello@Kairox.agency" class="text-link" style="border: none;"><i class="fa-solid fa-envelope"></i> Kairox.digital7@gmail.com</a></p>
+                </div>
+                <div class="social-links mt-4">
+                    <a href="#" class="glass"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="glass"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="glass"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kairox Digital. Premium web architecture.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS CDN Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("PUBLIC_KEY");
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
