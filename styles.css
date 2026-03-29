@@ -786,6 +786,83 @@ img {
   transition: all var(--transition-normal);
 }
 
+/* Custom Interaction: Wedding Portfolio Hover Overlay */
+.wedding-tile .tile-image-wrapper { position: relative; }
+.wedding-hover-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 2rem; opacity: 0; transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.wedding-tile:hover .wedding-hover-overlay { opacity: 1; }
+.wedding-title {
+  font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700;
+  color: #fff; transform: translateY(20px); transition: transform 0.4s ease;
+  position: relative;
+}
+.wedding-tile:hover .wedding-title { transform: translateY(0); }
+.wedding-title::after {
+  content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+  width: 0; height: 2px; background: #eab308; /* Gold accent */
+  transition: width 0.4s ease 0.1s;
+}
+.wedding-tile:hover .wedding-title::after { width: 100%; }
+
+/* Gallery Lightbox */
+.lightbox-modal {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 9999; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+}
+.lightbox-modal.active { opacity: 1; pointer-events: auto; }
+.lightbox-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(11, 15, 25, 0.95); backdrop-filter: blur(10px);
+}
+.lightbox-content {
+  position: relative; z-index: 10000; width: 90%; max-width: 1200px; height: 80vh;
+  display: flex; align-items: center; justify-content: center;
+}
+.lightbox-image-wrapper {
+  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.lightbox-image {
+  max-width: 100%; max-height: 100%; object-fit: contain;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-radius: var(--radius-sm);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.lightbox-image.fade-out { opacity: 0; transform: scale(0.98); }
+.lightbox-close {
+  position: absolute; top: -3rem; right: 0; background: transparent; border: none;
+  color: #fff; font-size: 2rem; cursor: pointer; transition: color 0.3s ease;
+}
+.lightbox-close:hover { color: var(--accent-blue); }
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff; width: 50px; height: 50px; border-radius: 50%; font-size: 1.25rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; backdrop-filter: blur(4px); transition: all 0.3s ease;
+}
+.lightbox-nav:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-50%) scale(1.1); }
+.lightbox-prev { left: -4rem; }
+.lightbox-next { right: -4rem; }
+.lightbox-caption {
+  position: absolute; bottom: -3rem; left: 0; width: 100%; text-align: center;
+  color: var(--text-secondary); font-family: var(--font-heading);
+  font-size: 1rem; letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .lightbox-nav { display: none; /* Hide arrows on mobile to rely on swipe */ }
+  .lightbox-close { top: -2.5rem; right: 1rem; }
+  .lightbox-content { width: 100%; height: 75vh; }
+  .lightbox-image-wrapper { padding: 0 1rem; }
+}
+
 /* Why Choose Us (Features) */
 .features-grid {
   display: grid;

@@ -223,4 +223,101 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 8. Gallery Lightbox Logic
+    const openGalleryBtn = document.getElementById('openWeddingGallery');
+    const lightboxModal = document.getElementById('gallery-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    const lightboxOverlay = document.querySelector('.lightbox-overlay');
+
+    const galleryImages = [
+        'assets/wedding-gallery-1.png',
+        'assets/wedding-gallery-2.png',
+        'assets/wedding-gallery-3.png'
+    ];
+    let currentImageIndex = 0;
+
+    function updateLightboxImage(index) {
+        lightboxImg.classList.add('fade-out');
+        setTimeout(() => {
+            lightboxImg.src = galleryImages[index];
+            lightboxImg.onload = () => {
+                lightboxImg.classList.remove('fade-out');
+            };
+        }, 300);
+    }
+
+    if (openGalleryBtn && lightboxModal) {
+        openGalleryBtn.addEventListener('click', () => {
+            currentImageIndex = 0;
+            lightboxImg.src = galleryImages[currentImageIndex];
+            lightboxModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeLightbox = () => {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxOverlay.addEventListener('click', closeLightbox);
+
+        if(lightboxPrev) {
+            lightboxPrev.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                updateLightboxImage(currentImageIndex);
+            });
+        }
+
+        if(lightboxNext) {
+            lightboxNext.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                updateLightboxImage(currentImageIndex);
+            });
+        }
+
+        // Mobile Swipe Support
+        let startX = 0;
+        let endX = 0;
+        
+        lightboxModal.addEventListener('touchstart', e => {
+            startX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightboxModal.addEventListener('touchend', e => {
+            endX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            if (endX < startX - 50) {
+                // Swipe Left -> Next Image
+                currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                updateLightboxImage(currentImageIndex);
+            }
+            if (endX > startX + 50) {
+                // Swipe Right -> Prev Image
+                currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                updateLightboxImage(currentImageIndex);
+            }
+        }
+        
+        // Keyboard Support
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxModal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') {
+                currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                updateLightboxImage(currentImageIndex);
+            }
+            if (e.key === 'ArrowRight') {
+                currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                updateLightboxImage(currentImageIndex);
+            }
+        });
+    }
 });
